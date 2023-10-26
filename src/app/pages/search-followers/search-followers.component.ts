@@ -50,6 +50,7 @@ export class SearchFollowersComponent {
         this.isNewUsername = false;
       },
       error: (err) => {
+        this.followers = [];
         this.error = err.error.message;
         this.isLoading = false;
       },
