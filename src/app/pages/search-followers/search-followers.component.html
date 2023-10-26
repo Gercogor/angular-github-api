@@ -1,0 +1,36 @@
+<div class="search-followers">
+  <h1>Followers for {{username}}</h1>
+
+  <form #myForm="ngForm" (submit)="submit(myForm)" novalidate>
+    <input type="text" name="username" (input)="changeUserName($event)" placeholder="username" ngModel required>
+    <button type="submit" class="form-submit">Get followers</button>
+  </form>
+  <div *ngIf="error">
+      {{error}}
+  </div>
+
+  <div class="followers-list">
+    <div *ngIf="isLoading">
+      <component-loader></component-loader>
+    </div>
+    <div *ngIf="!isLoading">
+      <component-user [followers]="followers" [username]="username"></component-user>
+      <div *ngIf="followers.length" class="pagination-block">
+        <div class="perpage">
+          <label for="perpage">Количество на странцие</label>
+          <select name="perpage" id="perpage" [(ngModel)]="pagination.perpage" (change)="changePerPage()">
+            <option value="10">10</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <div class="pagination">
+          <span class="pagination-button pagination-previos" (click)="previousPage()"><<<<</span>
+          <span>{{pagination.page}}</span>
+          <span class="pagination-button pagination-nex" (click)="nextPage()">>>>></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

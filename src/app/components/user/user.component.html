@@ -1,0 +1,12 @@
+<div class="followers">
+    <div class="follower" *ngFor="let follower of followers">
+        <img src="{{follower.avatar_url}}" class="follower-avatar" alt="">
+        <div class="follower-description">
+            <p>{{follower.login}}</p>
+            <a target="_blank" href="{{follower.html_url}}">{{follower.html_url}}</a>
+        </div>
+    </div>
+    <div class="no-followers" *ngIf="!followers?.length">
+        No followers... input username
+    </div>
+</div>

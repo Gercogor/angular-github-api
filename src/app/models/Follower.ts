@@ -1,0 +1,20 @@
+export interface Follower {
+    "login": "vvkkfwq",
+    "id": 34835951,
+    "node_id": "MDQ6VXNlcjM0ODM1OTUx",
+    "avatar_url": "https://avatars.githubusercontent.com/u/34835951?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vvkkfwq",
+    "html_url": "https://github.com/vvkkfwq",
+    "followers_url": "https://api.github.com/users/vvkkfwq/followers",
+    "following_url": "https://api.github.com/users/vvkkfwq/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vvkkfwq/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vvkkfwq/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vvkkfwq/subscriptions",
+    "organizations_url": "https://api.github.com/users/vvkkfwq/orgs",
+    "repos_url": "https://api.github.com/users/vvkkfwq/repos",
+    "events_url": "https://api.github.com/users/vvkkfwq/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vvkkfwq/received_events",
+    "type": "User",
+    "site_admin": false
+}
